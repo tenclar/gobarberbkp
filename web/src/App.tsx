@@ -3,14 +3,14 @@ import GlobalStyled from './styles/global';
 import SignIn from './pages/Signin';
 // import SignUp from './pages/SignUp';
 
-import AuthContext from './context/AuthContext';
+import { AuthProvider } from './hooks/AuthContext';
 
 const App: React.FC = () => (
   <>
     <GlobalStyled />
-    <AuthContext.Provider value={{ name: 'Tenclar' }}>
+    <AuthProvider>
       <SignIn />
-    </AuthContext.Provider>
+    </AuthProvider>
   </>
 );
 
